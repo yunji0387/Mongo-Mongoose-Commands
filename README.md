@@ -4,6 +4,8 @@
   - ```bash
     mongod
     ```
+  - activate success when we see "Waiting for connection" and port number
+    ![Image](Images/mongodConnection.png)
 2. connect with mongo shell
   - ```bash
     mongosh
@@ -13,5 +15,4 @@
 - ```bash
   use <database name>
   ```
-  ![Image](Images/mongodConnection.png)
    
