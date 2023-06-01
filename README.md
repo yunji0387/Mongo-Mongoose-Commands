@@ -11,5 +11,7 @@
 
 ### Create a new database
 - ```bash
-    use <database name>
-    ```
+  use <database name>
+  ```
+  ![Image]("/Images/mongodConnection/png")
+   
