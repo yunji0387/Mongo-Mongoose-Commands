@@ -11,6 +11,11 @@
     mongosh
     ```
 
+### Show all database
+- ```bash
+  show dbs
+  ```
+
 ### Create a new database
 - ```bash
   use <database name>
