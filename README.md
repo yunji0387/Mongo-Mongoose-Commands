@@ -13,5 +13,5 @@
 - ```bash
   use <database name>
   ```
-  ![Image]("/Images/mongodConnection/png")
+  ![Image](Images/mongodConnection.png)
    
