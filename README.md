@@ -23,7 +23,7 @@
   use <database name>
   ```
 
-### Insert an object to database
+### Insert a data to database
 - ```bash
   db.<database name>.insertOne(
     {
@@ -33,7 +33,26 @@
   )
   ```   
 - if database does not exist, it will create one.
-   
+
+### Insert a data with many subData (one to many relationship)
+- ```bash
+  db.<database name>.insertOne(
+    {
+      name: "tim",
+      age: 26,
+      achievement:[
+        {
+          title: "cap",
+          year: 2021
+        },
+        {
+          title: "gold",
+          year: 2023
+        }
+      ]
+    }
+  )
+  ```   
 
 ## Read Operation
 ### Find specific data
@@ -68,3 +87,29 @@
     }
   )
   ```
+ 
+ ## Update Operation
+ ### update a specific data
+ - ```bash
+    db.<database name>.updateOne(
+      {
+        _id: 1
+      },
+      {
+        $set: {title: 15}
+      }
+    )
+   ```
+   
+## Delete Operation
+### delete a specific data
+ - ```bash
+    db.<database name>.deleteOne(
+      {
+        _id: 1
+      }
+    )
+   ```
+- delete successful if return acknowledged: true, and deletedCount: 1
+
+
