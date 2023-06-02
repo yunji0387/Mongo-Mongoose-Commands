@@ -54,3 +54,17 @@
     }
   )
   ```
+### Find data with specific return
+- find data in database that has age > 10 and return with name and id
+- 0 = do not show, 1 = show
+- ```bash
+  db.<database name>.find(
+    {
+      age: {$gt: 10}
+    },
+    {
+      _id: 0,
+      name: 1
+    }
+  )
+  ```
