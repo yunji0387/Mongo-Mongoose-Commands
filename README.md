@@ -10,6 +10,12 @@
   - ```bash
     mongosh
     ```
+### If you forgot to quit the Mongod Server and close to terminal
+1. Open a new terminal
+2. ```bash
+    sudo pkill -f mongod
+    ```
+3. Enter you password 
 
 ### Show all database
 - ```bash
