@@ -108,6 +108,15 @@
    ```
    
 ## Delete Operation
+### delete a database
+1. switch to the database
+- ```bash
+    use <database name>
+   ```
+2. delete the database
+- ```bash
+    db.dropDatabase()
+   ```
 ### delete a specific data
  - ```bash
     db.<database name>.deleteOne(
