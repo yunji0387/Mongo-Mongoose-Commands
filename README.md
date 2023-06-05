@@ -148,7 +148,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 - ```javascript
     mongoose.connection.close();
   ```
-### [Data validation]("https://mongoosejs.com/docs/validation.html")
+### [Data validation](https://mongoosejs.com/docs/validation.html)
 - ```javascript
     const <schema name> = new mongoose.Schema({
           name: {
