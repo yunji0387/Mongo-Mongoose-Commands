@@ -1,4 +1,6 @@
 # Mongo Commands
+A list of basic Mongo commands and [Mongoose commands](#mongoose-commands) 
+## Mongo Bash Commands
 ### Connect to local server (In bash)
 1. activate local server port
   - ```bash
@@ -127,4 +129,9 @@
    ```
 - delete successful if return acknowledged: true, and deletedCount: 1
 
-
+## Mongoose commands
+### include npm libraries in bash in your project directory
+ - ```bash
+    npm i mongoose
+   ```
+### 
