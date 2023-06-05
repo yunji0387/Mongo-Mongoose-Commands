@@ -215,24 +215,35 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
       <key>: <value>
     });
     
-    <Model name>.insertMany([obj1, obj2, obj3], function(err){
-      if(err){
-        console.log(err);
-      }else{
-        console.log("Successfully saved all the <model name> to <database name>");
-      }
-    });
+    <Model name>.insertMany([obj1, obj2, obj3])
+       .then(function(){
+           console.log("Successfully add item list to database.");
+       })
+       .catch(function(err){
+           console.log(err);
+       });
+    
+    // Alternate version
+    /*
+    <Model name>.insertMany([obj1, obj2, obj3])
+       .then(() => {
+           console.log("Successfully add item list to database.");
+       })
+       .catch((err) => {
+           console.log(err);
+       });
+    */
   ```
 ## Read operation
 ### read all objects(documents) in database
 - ```javascript
-    <Model name>.find(function(err, <result name>){
-      if(err){
-        console.log(err);
-      }else{
-        console.log(<result name>);
-      }
-    });
+    <Model name>.find({})
+       .then(function(<result name>){
+           console.log("Successfully add item list to database.");
+       })
+       .catch(function(err){
+           console.log(err);
+       });
   ```
 ## Update operation
 ### update an object(document) in database
@@ -247,19 +258,21 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 ## Delete operation
 ### delete an object(document) in database
 - ```javascript
-    <Model name>.deleteOne({_id: "123123"}, function(err){
-      if(err){
-        console.log(err);
-      }else{
-        console.log("Successfully deleted the document.");
-      });
+    <Model name>.deleteOne({_id: "123123"})
+      .then(function(){
+            console.log("Successfully deleted item");
+        })
+        .catch(function(err){
+            console.log(err);
+        });
   ```
 ### delete multiple objects(documents) in database
 - ```javascript
-    <Model name>.deleteMany({name: "John"}, function(err){
-      if(err){
-        console.log(err);
-      }else{
-        console.log("Successfully deleted the documents.");
-      });
+    <Model name>.deleteMany({name: "John"})
+      .then(function(){
+            console.log("Successfully deleted items");
+        })
+        .catch(function(err){
+            console.log(err);
+        });
   ```
