@@ -163,6 +163,27 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
           review: String
         });
   ```
+### Establishing Relationships and Embedding Documents
+- ```javascript
+    const schema1 = new mongoose.Schema({
+          name: {
+            type: String,
+            required: [true, "Please check your data entry, no name specified!"]
+          },
+          rating: {
+            type: Number,
+            min: 1,
+            max: 10
+          },
+          review: String
+        });
+        
+   const schema2 = new mongoose.Schema({
+        name: String,
+        age: Number,
+        FavouriteBook: schema1
+   }); 
+  ```
 ## Create Operation
 ### create New Schema and Model(collection)
   1.  ```javascript
@@ -213,7 +234,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     });
   ```
 ## Update operation
-### update objects(documents) in database
+### update an object(document) in database
 - ```javascript
     <Model name>.updateOne({_id: "123123"} , {name: "newName"}, function(err){
       if(err){
@@ -223,12 +244,21 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
       });
   ```
 ## Delete operation
-### delete objects(documents) in database
+### delete an object(document) in database
 - ```javascript
     <Model name>.deleteOne({_id: "123123"}, function(err){
       if(err){
         console.log(err);
       }else{
         console.log("Successfully deleted the document.");
+      });
+  ```
+### delete multiple objects(documents) in database
+- ```javascript
+    <Model name>.deleteMany({name: "John"}, function(err){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("Successfully deleted the documents.");
       });
   ```
