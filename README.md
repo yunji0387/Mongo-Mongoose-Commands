@@ -1,4 +1,4 @@
-# Mongo Commands
+# Mongo/Mongoose Commands
 A list of basic Mongo commands and [Mongoose commands](#mongoose-commands) 
 ## Mongo Bash Commands
 ### Connect to local server (In bash)
