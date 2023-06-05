@@ -129,7 +129,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
    ```
 - delete successful if return acknowledged: true, and deletedCount: 1
 
-## Mongoose commands
+## [Mongoose commands](https://mongoosejs.com/docs/index.html)
 ### include npm libraries in bash in your project directory
  - ```bash
     npm i mongoose
@@ -152,7 +152,8 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 - ```javascript
     const <schema name> = new mongoose.Schema({
           name: {
-            
+            type: String,
+            required: [true, "Please check your data entry, no name specified!"]
           },
           rating: {
             type: Number,
@@ -201,7 +202,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     });
   ```
 ## Read operation
-### read all objects(documents) in databse
+### read all objects(documents) in database
 - ```javascript
     <Model name>.find(function(err, <result name>){
       if(err){
@@ -210,4 +211,24 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
         console.log(<result name>);
       }
     });
+  ```
+## Update operation
+### update objects(documents) in database
+- ```javascript
+    <Model name>.updateOne({_id: "123123"} , {name: "newName"}, function(err){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("Successfully updated the document.");
+      });
+  ```
+## Delete operation
+### delete objects(documents) in database
+- ```javascript
+    <Model name>.deleteOne({_id: "123123"}, function(err){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("Successfully deleted the document.");
+      });
   ```
