@@ -144,6 +144,25 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     - ```javascript
         mongoose.connect("mongodb://localhost:27017/<database name>", { useNewUrlParser: true });
       ```
+### Disconnect to mongoDB database in nodejs
+- ```javascript
+    mongoose.connection.close();
+  ```
+### [Data validation]("https://mongoosejs.com/docs/validation.html")
+- ```javascript
+    const <schema name> = new mongoose.Schema({
+          name: {
+            
+          },
+          rating: {
+            type: Number,
+            min: 1,
+            max: 10
+          },
+          review: String
+        });
+  ```
+## Create Operation
 ### create New Schema and Model(collection)
   1.  ```javascript
         const <schema name> = new mongoose.Schema({
@@ -178,6 +197,17 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
         console.log(err);
       }else{
         console.log("Successfully saved all the <model name> to <database name>");
+      }
+    });
+  ```
+## Read operation
+### read all objects(documents) in databse
+- ```javascript
+    <Model name>.find(function(err, <result name>){
+      if(err){
+        console.log(err);
+      }else{
+        console.log(<result name>);
       }
     });
   ```
