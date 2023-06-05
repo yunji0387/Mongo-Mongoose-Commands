@@ -134,4 +134,34 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
  - ```bash
     npm i mongoose
    ```
-### 
+### Connect to mongoDB database in nodejs
+1. require package  
+   - ```javascript
+      const mongoose = require("mongoose"); 
+     ```
+2. connect to mongoDB database
+   - connect to database with local host
+    - ```javascript
+        mongoose.connect("mongodb://localhost:27017/<database name>", { useNewUrlParser: true });
+      ```
+### create New Schema and Model(collection)
+  1.  ```javascript
+        const <schema name> = new mongoose.Schema({
+          name: String,
+          rating: Number,
+          review: String
+        });
+      ```
+  2.  ```javascript
+        const <Model name> = mongoose.model("<Database name> without s", <schema name>);
+      ``` 
+### adding new object(document) to databse
+- ```javascript
+    const obj = new <Model name>({
+      <key>: <value>,
+      <key>: <value>,
+      <key>: <value>
+    });
+    
+    const obj.save();
+  ```
