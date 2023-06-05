@@ -155,7 +155,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
   2.  ```javascript
         const <Model name> = mongoose.model("<Database name> without s", <schema name>);
       ``` 
-### adding new object(document) to databse
+### insert new object(document) to databse
 - ```javascript
     const obj = new <Model name>({
       <key>: <value>,
@@ -164,4 +164,20 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     });
     
     const obj.save();
+  ```
+### insert many objects(documents) to database
+- ```javascript
+    const obj1 = new <Model name>({
+      <key>: <value>,
+      <key>: <value>,
+      <key>: <value>
+    });
+    
+    <Model name>.insertMany([obj1, obj2, obj3], function(err){
+      if(err){
+        console.log(err);
+      }else{
+        console.log("Successfully saved all the <model name> to <database name>");
+      }
+    });
   ```
