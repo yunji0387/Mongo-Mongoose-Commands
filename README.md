@@ -196,7 +196,7 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
   2.  ```javascript
         const <Model name> = mongoose.model("<Database name> without s", <schema name>);
       ``` 
-    - model name's first letter usually written in Capital letter
+   - model name's first letter usually written in Capital letter
 ### insert new object(document) to databse
 - ```javascript
     const obj = new <Model name>({
