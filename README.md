@@ -2,6 +2,10 @@
 A list of basic Mongo commands and [Mongoose commands](#mongoose-commands) 
 ## Mongo Bash Commands
 ### Connect to local server (In bash)
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 1. activate local server port
   - ```bash
     mongod
@@ -12,17 +16,35 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
   - ```bash
     mongosh
     ```
+
+<!-- /MarkdownTOC -->
+</details>
+
 ### If you forgot to quit the Mongod Server and close to terminal
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 1. Open a new terminal
 2. ```bash
     sudo pkill -f mongod
     ```
 3. Enter you password 
 
+<!-- /MarkdownTOC -->
+</details>
+
 ### Show all database
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - ```bash
   show dbs
   ```
+
+<!-- /MarkdownTOC -->
+</details>
 
 ## Create Operation
 
