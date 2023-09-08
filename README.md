@@ -180,10 +180,22 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 
 ## [Mongoose commands](https://mongoosejs.com/docs/index.html)
 ### include npm libraries in bash in your project directory
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
  - ```bash
     npm i mongoose
    ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ### Connect to mongoDB database in nodejs
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 1. require package  
    - ```javascript
       const mongoose = require("mongoose"); 
@@ -193,11 +205,27 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     - ```javascript
         mongoose.connect("mongodb://localhost:27017/<database name>", { useNewUrlParser: true });
       ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ### Disconnect to mongoDB database in nodejs
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - ```javascript
     mongoose.connection.close();
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ### [Data validation](https://mongoosejs.com/docs/validation.html)
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - ```javascript
     const <schema name> = new mongoose.Schema({
           name: {
@@ -212,7 +240,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
           review: String
         });
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ### Establishing Relationships and Embedding Documents
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 - ```javascript
     const schema1 = new mongoose.Schema({
           name: {
@@ -233,7 +269,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
         FavouriteBook: schema1
    }); 
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ## Create Operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### create New Schema and Model(collection)
   1.  ```javascript
         const <schema name> = new mongoose.Schema({
@@ -283,7 +327,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
        });
     */
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ## Read operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### read all objects(documents) in database
 - ```javascript
     <Model name>.find({})
@@ -294,7 +346,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
            console.log(err);
        });
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ## Update operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### update an object(document) in database
 - ```javascript
     <Model name>.updateOne({_id: "123123"} , {name: "newName"}, function(err){
@@ -304,7 +364,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
         console.log("Successfully updated the document.");
       });
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ## Delete operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### delete an object(document) in database
 - ```javascript
     <Model name>.deleteOne({_id: "123123"})
@@ -325,3 +393,6 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
             console.log(err);
         });
   ```
+ 
+<!-- /MarkdownTOC -->
+</details>
