@@ -47,6 +47,9 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 </details>
 
 ## Create Operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
 
 ### Create a new database
 - ```bash
@@ -83,6 +86,9 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     }
   )
   ```   
+
+<!-- /MarkdownTOC -->
+</details>
 
 ## Read Operation
 ### Find specific data
