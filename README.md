@@ -91,6 +91,10 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
 </details>
 
 ## Read Operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### Find specific data
 - ```bash
   db.<database name>.find(
@@ -124,7 +128,14 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
   )
   ```
  
+<!-- /MarkdownTOC -->
+</details>
+
  ## Update Operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
  ### update a specific data
  - ```bash
     db.<database name>.updateOne(
@@ -136,8 +147,15 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
       }
     )
    ```
-   
+ 
+<!-- /MarkdownTOC -->
+</details>
+
 ## Delete Operation
+<details close>
+<summary><b>(click to expand/hide)</b></summary>
+<!-- MarkdownTOC -->
+
 ### delete a database
 1. switch to the database
 - ```bash
@@ -156,6 +174,9 @@ A list of basic Mongo commands and [Mongoose commands](#mongoose-commands)
     )
    ```
 - delete successful if return acknowledged: true, and deletedCount: 1
+ 
+<!-- /MarkdownTOC -->
+</details>
 
 ## [Mongoose commands](https://mongoosejs.com/docs/index.html)
 ### include npm libraries in bash in your project directory
